@@ -74,3 +74,32 @@ changeFontSize.addEventListener("click", async () => {
       document.body.style.fontSize = fontSize;
     });
   }
+
+      // Border color change
+      let changeBorderColor = document.getElementById("changeBorderColor");
+
+      chrome.storage.sync.get("borderColor", ({ borderColor }) => {
+        changeBorderColor.style.backgroundColor = borderColor;
+      });
+      
+      // // When the button is clicked, inject setChangeBorderColor into current page
+      changeBorderColor.addEventListener("click", async () => {
+          let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        
+          chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            function: setChangeBorderColor,
+          });
+        });
+        
+      //   // The body of this function will be executed as a content script inside the
+      //   // current page
+        function setChangeBorderColor() {
+          chrome.storage.sync.get("borderColor", ({ borderColor }) => {
+            let allImages = document.querySelectorAll("img");
+            for (let img of allImages) {
+              img.style.border = borderColor;
+            }
+          });
+        }
+
