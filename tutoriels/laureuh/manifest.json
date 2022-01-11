@@ -1,7 +1,7 @@
 {
   "name": "Starto",
-  "description": "Build an Extension!",
-  "version": "1.0",
+  "description": "Let's change the page!",
+  "version": "2.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -22,5 +22,22 @@
     "32": "/images/get_started32.png",
     "48": "/images/get_started48.png",
     "128": "/images/get_started128.png"
-  }
+  },
+  "content_scripts": [
+    {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": [
+            "background.js",
+            "popup.js",
+            "options.js"
+        ],
+        "run_at": "document_end",
+        "css": [
+            "button.css"
+        ]
+    }
+  ]
 }
