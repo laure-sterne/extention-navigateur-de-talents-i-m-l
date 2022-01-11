@@ -4,6 +4,13 @@
 
 ## Lundi 10 janvier 2022
 
+### Laureuh
 - Mise en place d'un espace de travail et d'organisation (cf. Miro et Google Drive)
 - Création du dossier tuto sur Github
 - Apprentissage tuto d'extensions de Getting Started par Google
+
+## Mardi 11 janvier 2022
+
+### Laureuh
+- Avancer de l'apprentissage des extensions
+- Réalisation de la partie "Je débute" & "Je suis à l'aise" de la fiche du Projet Collectif avec le groupe Alexia, Arthur et Sarah
