@@ -103,3 +103,33 @@ changeFontSize.addEventListener("click", async () => {
           });
         }
 
+
+// replace images by another image
+
+let changeImage = document.getElementById("changeImage");
+
+chrome.storage.sync.get("color", ({ color }) => {
+  changeImage.style.backgroundColor = "#FFC93C";
+});
+
+// // When the button is clicked, inject setPageBackgroundColor into current page
+changeImage.addEventListener("click", async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: setCatImage,
+    });
+  });
+  
+//   // The body of this function will be executed as a content script inside the
+//   // current page
+  function setCatImage() {
+    chrome.storage.sync.get("catPic", ({ catPic }) => {
+      let allImages = document.querySelectorAll("img");
+      //let newImage = document.getElementById("img").src = "images/catpic.png";
+            for (let img of allImages) {
+              img.src = catPic
+            }
+          });
+        }
