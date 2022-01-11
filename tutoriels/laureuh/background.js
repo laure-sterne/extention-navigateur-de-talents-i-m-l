@@ -1,7 +1,7 @@
 // background.js
 
 // changement couleur background
-let color = '#3aa757';
+let color = '#142270';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ color });
@@ -9,9 +9,16 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 // changement couleur h1
-let textColor = "#f999b7";
+let textColor = "#f99";
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ textColor });
   console.log('Default text color set to %cpink', `color: ${textColor}`);
+});
+
+let fontSize = "20px";
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ fontSize });
+  console.log('Default font size set to 20px');
 });
