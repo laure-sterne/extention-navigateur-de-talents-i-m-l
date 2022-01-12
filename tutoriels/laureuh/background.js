@@ -32,11 +32,19 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log('Default color border set to RED');
 });
 
-// replace images by another image
-let catPic = "https://i.pinimg.com/564x/db/32/23/db32232ee849096679c32d3392a87694.jpg";
+// // replace images by another image
+// let catPic = "https://i.pinimg.com/564x/db/32/23/db32232ee849096679c32d3392a87694.jpg";
+
+// chrome.runtime.onInstalled.addListener(() => {
+//   chrome.storage.sync.set({ catPic });
+//   console.log('Default picture set to CAT PICTURE');
+// });
+
+
+//replace images by Pokemon gif
+let pokemonGif = "https://cdn-icons-png.flaticon.com/512/188/188987.png";
 
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ catPic });
-  console.log('Default picture set to CAT PICTURE');
+  chrome.storage.sync.set({ pokemonGif });
+  console.log('Default gif set to Pokemon Gif');
 });
-
