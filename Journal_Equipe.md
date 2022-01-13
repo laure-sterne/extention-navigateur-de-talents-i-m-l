@@ -14,3 +14,11 @@
 ### Laureuh
 - Avancer de l'apprentissage des extensions
 - Réalisation de la partie "Je débute" & "Je suis à l'aise" de la fiche du Projet Collectif avec le groupe Alexia, Arthur et Sarah
+
+
+## Jeudi 13 Janvier :  
+
+- définition des fonctionnalités pour notre extension
+- création de notre popup (pas encore le CSS)
+- changement du style sur une page web (surligner les liens)
+- remise en cause de notre façon de faire puisque découverte d'une possible API à utiliser, affaire à suivre..to be continued..
