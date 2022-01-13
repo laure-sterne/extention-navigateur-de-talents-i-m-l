@@ -1,12 +1,17 @@
-//Première option : augmenter les contrastes 
+// Première option : augmenter les contrastes 
 
-//let contrast = document.getElementById("contrast");
-//chrome.storage.sync.get()
+/*
+let contrast = document.getElementById("contrast");
 
+chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
+  contrast.style.
+};
+*/
 
-//Deuxième option : mettre en évidence les liens
+// Deuxième option : mettre en évidence les liens
 
 let highlight = document.getElementById("highlight");
+
 chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
   highlight.style.backgroundColor = highlightLink
 });
@@ -22,12 +27,17 @@ highlight.addEventListener("click", async () => {
 
 function setPageLink() {
   chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
-    document.querySelector("p").style.color = highlightLink;
+    let listeLien = document.querySelectorAll("a")
+
+    for (i = 0; i < listeLien.length; i++) {
+      console.log(listeLien[i])
+      listeLien[i].style.backgroundColor = highlightLink;
+    }
+    //document.querySelectorAll("a").style.backgroundColor = highlightLink;
   });
 }
 
-
-//Troisième option : visualiser les actions avec des icônes 
+// Troisième option : visualiser les actions avec des icônes 
 
 
 

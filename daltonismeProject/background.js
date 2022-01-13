@@ -1,5 +1,4 @@
-
-
+// Deuxième option : mettre en évidence les liens
 
 let highlightLink = "#FF5733"
 
