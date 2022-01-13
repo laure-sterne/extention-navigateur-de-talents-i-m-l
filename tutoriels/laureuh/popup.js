@@ -42,7 +42,7 @@ changeTextColor.addEventListener("click", async () => {
     
 function setPageTextColor() {
     chrome.storage.sync.get("textColor", ({ textColor }) => {
-      document.querySelector("div").style.color = textColor;
+      document.querySelector("h1").style.color = textColor;
     });
 }
 
