@@ -12,15 +12,15 @@ button.current {
                 0 0 0 4px black;
 }
 
-/* #close-image img {
+/* #changeGif img {
     display: block;
-    height: 130px;  
-    width: 100px;
-}
-
-#close-CSS {
-    background-image: url( 'http://thinkingstiff.com/images/matt.jpg' );
-    background-size: 100px 130px;
-    height: 134px;  
-    width: 104px;
+    height: 30px;  
+    width: 30px;
 } */
+
+#changeGif {
+    background-image: url( 'https://cdn-icons-png.flaticon.com/512/188/188987.png' );
+    background-size: 30px 30px;
+    height: 30px;  
+    width: 30px;
+}
