@@ -23,6 +23,7 @@ function setColorContrast() {
   })
 }
 
+
 // Deuxième option : mettre en évidence les liens
 
 let highlight = document.getElementById("highlight");
@@ -50,6 +51,7 @@ function setPageLink() {
     }
   });
 }
+
 
 // Troisième option : visualiser les actions avec des icônes 
 
