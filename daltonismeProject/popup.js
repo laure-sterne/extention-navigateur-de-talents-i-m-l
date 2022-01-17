@@ -1,38 +1,34 @@
-// Première option : augmenter les contrastes 
+// Option d'urgence : background white, font black, 
 
 
-// let contrast = document.getElementById("contrast");
-
-// chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
-//   contrast.style.backgroundColor = contrastColor
+// let blackAndWhite = document.getElementById("blackAndWhite");
+// chrome.storage.sync.get("blackBackground", ({blackBackground}) => {
+//   blackAndWhite.style = blackBackground
 // });
-
-// contrast.addEventListener("click", async () => {
-//   let [tab] = await chrome.tabs.query({ active : true, currentWindow: true});
+// blackAndWhite.addEventListener("click", async () => {
+//   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
 //   chrome.scripting.executeScript({
-//     target : { tabId: tab.id },
-//     function : setColorContrast,
+//     target: { tabId: tab.id },
+//     function: setPageLink,
 //   });
 // });
 
+// function setBlackAndWhite() {
 
-// function setColorContrast() {
-//   chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
-//     let 
-//   })
-// }
+//   chrome.storage.sync.get("blackBackground", ({ blackBackground }) => {
+//     document.getElementById("myDiv").style.backgroundColor = "black";
+//   });
 
 
-var requestURL = ''; 
 
 // Deuxième option : mettre en évidence les liens si le background est foncé 
 
 let highlight = document.getElementById("highlight");
 
-chrome.storage.sync.get("highlightLinkLight", ({ highlightLinkClear }) => {
+chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
   highlight.style.backgroundColor = highlightLink
-});
+ });
 
 highlight.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -43,14 +39,15 @@ highlight.addEventListener("click", async () => {
   });
 });
 
-let colorBrightness = element.style.getPropertyValue("--backgroundColor");
+
 function setPageLink() {
-  if(colorBrightness <= 50%)
-    chrome.storage.sync.get("highlightLinkLight", ({ highlightLinkLight }) => {
+
+    chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
       let listeLien = document.querySelectorAll("a")
     for (i = 0; i < listeLien.length; i++) {
       console.log(listeLien[i])
-      listeLien[i].style.backgroundColor = highlightLinkLight;
+      listeLien[i].style.backgroundColor = highlightLink;
+      
     }
   });
 }
@@ -58,4 +55,4 @@ function setPageLink() {
 
 
 
-
+}
