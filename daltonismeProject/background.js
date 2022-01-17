@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 // Deuxième option : mettre en évidence les liens
 
-let highlightLink = "#ecff00"  
+let highlightLink = "#111111"  
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ highlightLink });
