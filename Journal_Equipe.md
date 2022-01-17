@@ -16,9 +16,17 @@
 - Réalisation de la partie "Je débute" & "Je suis à l'aise" de la fiche du Projet Collectif avec le groupe Alexia, Arthur et Sarah
 
 
-## Jeudi 13 Janvier :  
+## Jeudi 13 Janvier 2022
 
 - définition des fonctionnalités pour notre extension
 - création de notre popup (pas encore le CSS)
 - changement du style sur une page web (surligner les liens)
 - remise en cause de notre façon de faire puisque découverte d'une possible API à utiliser, affaire à suivre..to be continued..
+
+## Lundi 17 Janvier 2022
+
+- dépression en cours de chargement...
+- tentative d'utilisation les stylisations des modules de npm color-blind sans trop de succès...
+- retranchement sur une option d'urgence : à savoir tout mettre en noir et blanc en cours d'accomplissement (we belièvre)
+- stylisation avec du CSS de la pop up
+- début d'ajout du bouton reset pour "nettoyer la page"
