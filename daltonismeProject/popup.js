@@ -1,30 +1,7 @@
-// Première option : augmenter les contrastes 
 
 
-let contrast = document.getElementById("contrast");
 
-chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
-  contrast.style.backgroundColor = contrastColor
-});
-
-contrast.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active : true, currentWindow: true});
-
-  chrome.scripting.executeScript({
-    target : { tabId: tab.id },
-    function : setColorContrast,
-  });
-});
-
-
-function setColorContrast() {
-  chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
-    let 
-  })
-}
-
-
-// Deuxième option : mettre en évidence les liens
+// Deuxième option : mettre en évidence les liens si la checkboc est checked
 
 let highlight = document.getElementById("highlight");
 
@@ -41,13 +18,17 @@ highlight.addEventListener("click", async () => {
   });
 });
 
+
 function setPageLink() {
   chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
     let listeLien = document.querySelectorAll("a")
-
+  
     for (i = 0; i < listeLien.length; i++) {
-      console.log(listeLien[i])
-      listeLien[i].style.backgroundColor = highlightLink;
+      if(listeLien[i].style.backgroundColor == highlightLink){
+        listeLien[i].style.backgroundColor = "transparent"
+      } else {
+        listeLien[i].style.backgroundColor = highlightLink;
+      }
     }
   });
 }

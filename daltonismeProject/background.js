@@ -2,6 +2,7 @@
 
 let contrastColor = "constrast(1.75)"
 
+
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ contrastColor });
   console.log('Default color set to %cconstrat', `color: ${contrastColor}`);
@@ -10,7 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 // Deuxième option : mettre en évidence les liens
 
-let highlightLink = "#111111"  
+let highlightLink = "rgb(236, 251, 82)"  
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ highlightLink });
