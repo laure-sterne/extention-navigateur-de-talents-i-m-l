@@ -1,7 +1,7 @@
 {
   "name": "See More",
   "description": "Way to see better website!",
-  "version": "1.9",
+  "version": "2.3",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
