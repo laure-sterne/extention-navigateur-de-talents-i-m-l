@@ -1,4 +1,0 @@
-const colors = [{
-    brightColor : , 
-    darkColor : , 
-}]
