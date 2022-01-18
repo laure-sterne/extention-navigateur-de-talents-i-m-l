@@ -74,32 +74,26 @@ function setSober() {
 
 // Troisième option : escroquerie
 
-// let highlight = document.getElementById("highlight");
+let addOn = document.getElementById("addOn");
 
-// chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
-//   highlight.style.backgroundColor = highlightLink
-// });
+chrome.storage.sync.get("extension", ({ extension }) => {
+  addOn.style.backgroundColor = extension
+});
 
-// highlight.addEventListener("click", async () => {
-//   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+highlight.addEventListener("click", async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-//   chrome.scripting.executeScript({
-//     target: { tabId: tab.id },
-//     function: setPageLink,
-//   });
-// });
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: setNewAddOn,
+  });
+});
 
 
-// function setPageLink() {
-//   chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
-//     let listeLien = document.querySelectorAll("a")
-  
-//     for (i = 0; i < listeLien.length; i++) {
-//       if(listeLien[i].style.backgroundColor == highlightLink){
-//         listeLien[i].style.backgroundColor = ''
-//       } else {
-//         listeLien[i].style.backgroundColor = highlightLink;
-//       }
-//     }
-//   });
-// }
+function setNewAddOn() {
+  chrome.storage.sync.get("extension", ({ extension }) => {
+
+    document.body.style = extension;
+
+  });
+}
