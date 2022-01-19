@@ -3,30 +3,33 @@
 
   <head>
     <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Roboto:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
   </head>
-
+  <h2>See More</h2>
   <body>
 
-    <div> 
-      <img src="images/get_started32.png">
-      <h1>See More</h1>
+    <div id="Titre"> 
+      <img src="/images/logo_32.png">
     </div>
 
     <p>Choose your options</p>
 
-    <div>
+    <div id="Contrast">
       <input type="checkbox" id="contrast" name="contrast">
-      <label for="contrast">Accentuate the contrast</label>
+      <label for="contrast"  id="contrast" > Contrast</label>
+      <p>This is a exemple</p>
     </div>
     
-    <div>
+    <div id="Highlight">
       <input type="checkbox" id="highlight" name="highlight">
-      <label for="highlight">Highlight and bold links </label>
+      <label for="highlight" id="highlight">Highlight links </label>
+      <p>This is a exemple. </p>
     </div>
 
-    <div>
+    <div id="Icon">
       <input type="checkbox" id="icon" name="icon">
-      <label for="icon">View Actions</label>
+      <label for="icon" id="icon"> Actions</label>
+      <p>Click to discover.</p>
     </div>
 
     <script src="popup.js"></script>
