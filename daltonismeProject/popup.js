@@ -1,30 +1,4 @@
-// Première option : augmenter les contrastes 
-
-
-let contrast = document.getElementById("contrast");
-
-chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
-  contrast.style.backgroundColor = contrastColor
-});
-
-contrast.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active : true, currentWindow: true});
-
-  chrome.scripting.executeScript({
-    target : { tabId: tab.id },
-    function : setColorContrast,
-  });
-});
-
-
-function setColorContrast() {
-  chrome.storage.sync.get("contrastColor", ({contrastColor}) => {
-    let 
-  })
-}
-
-
-// Deuxième option : mettre en évidence les liens
+// Première option : mettre en évidence les liens si la checkboc est checked
 
 let highlight = document.getElementById("highlight");
 
@@ -41,19 +15,85 @@ highlight.addEventListener("click", async () => {
   });
 });
 
+
 function setPageLink() {
   chrome.storage.sync.get("highlightLink", ({ highlightLink }) => {
     let listeLien = document.querySelectorAll("a")
-
+  
     for (i = 0; i < listeLien.length; i++) {
-      console.log(listeLien[i])
-      listeLien[i].style.backgroundColor = highlightLink;
+      if(listeLien[i].style.backgroundColor == highlightLink){
+        listeLien[i].style.backgroundColor = ''
+      } else {
+        listeLien[i].style.backgroundColor = highlightLink;
+      }
     }
   });
 }
 
 
-// Troisième option : visualiser les actions avec des icônes 
+// Deuxième option : URGENCE
+
+let blackAndWhite = document.getElementById("blackAndWhite");
+
+chrome.storage.sync.get("blackBackground", ({ blackBackground }) => {
+  blackAndWhite.style.backgroundColor = blackBackground
+});
+
+chrome.storage.sync.get("whiteFont", ({ whiteFont }) => {
+  blackAndWhite.style.color = whiteFont
+});
+
+blackAndWhite.addEventListener("click", async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: setSober,
+  });
+});
 
 
+function setSober() {
+  chrome.storage.sync.get("blackBackground", ({ blackBackground }) => {
+    if(document.body.style.backgroundColor !== blackBackground){
+      document.body.style.backgroundColor = blackBackground
+    } else {
+      document.body.style.backgroundColor = '';
+    }
+  });
 
+  chrome.storage.sync.get("whiteFont", ({ whiteFont }) => {
+    if(document.body.style.color !== whiteFont){
+      document.body.style.color = whiteFont
+    } else {
+      document.body.style.color = '';
+    }
+  });
+}
+
+
+// Troisième option : escroquerie
+
+let addOn = document.getElementById("addOn");
+
+chrome.storage.sync.get("extension", ({ extension }) => {
+  addOn.style.backgroundColor = extension
+});
+
+highlight.addEventListener("click", async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: setNewAddOn,
+  });
+});
+
+
+function setNewAddOn() {
+  chrome.storage.sync.get("extension", ({ extension }) => {
+
+    document.body.style = extension;
+
+  });
+}
