@@ -5,6 +5,7 @@ body {
     width: 500px;
     background-color:rgb(255, 233, 199);
   }
+
   p {
     text-align: center;
     font-family: 'Dongle', sans-serif;
@@ -13,34 +14,6 @@ body {
     height: 20px;
     font-size: 250%;
   }
-
-
-  #Contrast{
-    font-size: 50px;
-   text-align: left;
-   font-family: 'Dongle', sans-serif;
-   color: black;
-   height: 100px;
-   position: static;
-   
-  }
-  
- #Contrast p {
-   height: 43px; 
-   color:white;
-   text-align: center;
-   font-family: 'dongle',sans-serif;
-   font-size: 45px;
-   border-left: 50px;
-   background-color: black;
-   position: static;
-   opacity: 0.50;
- }
-  input {
-    float: left;
-    height: 50px;
-    width: 20px;
-}
 
    #Highlight{
      font-size: 50px;
@@ -61,7 +34,36 @@ body {
     opacity: 0.50;
    }
 
-    #Icon{
+   
+  #BlackAndWhite{
+    font-size: 50px;
+   text-align: left;
+   font-family: 'Dongle', sans-serif;
+   color: black;
+   height: 100px;
+   position: static;
+   
+  }
+  
+ #BlackAndWhite p {
+   height: 43px; 
+   color:white;
+   text-align: center;
+   font-family: 'dongle',sans-serif;
+   font-size: 45px;
+   border-left: 50px;
+   background-color: black;
+   position: static;
+   opacity: 0.50;
+ }
+
+  input {
+    float: left;
+    height: 50px;
+    width: 20px;
+}
+
+    #AddOn {
       font-size: 50px;
     text-align: left;
     font-family: 'Dongle', sans-serif;
@@ -70,7 +72,7 @@ body {
     position: static;
     }
 
-    #Icon p {
+    #AddOn p {
       font-size: 45px;
       color: coral;
       text-align: center;
@@ -78,6 +80,7 @@ body {
       height: 130px;
       position: static;
     }
+
   head{
       width: 100px;
       background: rgb(255, 0, 0);
