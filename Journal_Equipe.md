@@ -30,3 +30,11 @@
 - retranchement sur une option d'urgence : à savoir tout mettre en noir et blanc en cours d'accomplissement (we belièvre)
 - stylisation avec du CSS de la pop up
 - début d'ajout du bouton reset pour "nettoyer la page"
+
+## Mardi 18 Janvier 2022
+
+- 
+
+## Mercredi 19 Janvier 2022
+
+- 
