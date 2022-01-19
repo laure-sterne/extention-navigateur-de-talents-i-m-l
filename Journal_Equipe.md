@@ -33,8 +33,11 @@
 
 ## Mardi 18 Janvier 2022
 
-- 
+- Style de la pop up, css 
+- fonctionnnalitées highlight et option noir et blanc 
 
 ## Mercredi 19 Janvier 2022
 
-- 
+- merge des différentes branches et réglement des conflits 
+- suite du css pour la pop up avec les nouvelles fonctionnalités 
+- troisième fonctionalité troll, lien vers une autre extension 

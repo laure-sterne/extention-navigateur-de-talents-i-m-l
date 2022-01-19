@@ -74,26 +74,26 @@ function setSober() {
 
 // Troisième option : escroquerie
 
-let addOn = document.getElementById("addOn");
+// let addOn = document.getElementById("addOn");
 
-chrome.storage.sync.get("extension", ({ extension }) => {
-  addOn.style.backgroundColor = extension
-});
+// chrome.storage.sync.get("extension", ({ extension }) => {
+//   addOn.style.backgroundColor = extension
+// });
 
-highlight.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+// highlight.addEventListener("click", async () => {
+//   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setNewAddOn,
-  });
-});
+//   chrome.scripting.executeScript({
+//     target: { tabId: tab.id },
+//     function: setNewAddOn,
+//   });
+// });
 
 
-function setNewAddOn() {
-  chrome.storage.sync.get("extension", ({ extension }) => {
+// function setNewAddOn() {
+//   chrome.storage.sync.get("extension", ({ extension }) => {
 
-    document.body.style = extension;
+//     document.body.style = extension;
 
-  });
-}
+//   });
+// }
