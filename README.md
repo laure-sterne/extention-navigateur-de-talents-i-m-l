@@ -22,7 +22,6 @@ or https method
 To use the project
 1. You just go to the page where your [Chrome extensions](chrome://extensions/) 
 2. At the top right, you check the box "Developer mode" to allow to add the extension
-<img src="checkBox.png" alt="example of Developer mode box"/>
 3. Now, you can click on the load unpackaged extension button to add the folder's project
 4. Let's enjoy with the See More extension by using it on website like [Mozilla](https://developer.mozilla.org/en-US/docs/Web/Accessibility) for example!
     
